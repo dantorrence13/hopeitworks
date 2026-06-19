@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Dan Torrence — torrence.biz</title>
+  <meta name="description" content="Get in touch with Dan Torrence. Send an email, call, or use the contact form to reach out." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+  *{box-sizing:border-box}
+body{font-family:Georgia,serif;margin:0;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);color:#333;min-height:100vh;padding:28px}
+  .container{max-width:980px;margin:40px auto;background:#fff;padding:44px;border-radius:12px;box-shadow:0 12px 36px rgba(20,30,40,0.08)}
+header{text-align:center;margin-bottom:28px;border-bottom:1px solid #e9eef3;padding-bottom:22px}
+h1{font-size:2.2rem;color:#2c3e50;margin:0}
+.tagline{color:#7f8c8d;font-style:italic;margin-top:6px}
+.location{color:#95a5a6;margin-top:6px}
+nav{text-align:center;margin-bottom:24px}
+nav a{display:inline-block;margin:0 10px;color:#3498db;text-decoration:none;font-size:1rem;font-family:Georgia,serif}
+nav a:hover{text-decoration:underline}
+  nav a.active{font-weight:700;color:#2c3e50;text-decoration:none}
+.card{background:#fbfcfe;padding:24px;border-radius:10px;border:1px solid #f2f6f9;margin-bottom:22px}
+h2{color:#34495e;margin:0 0 14px 0;font-size:1.2rem}
+p{margin:0 0 14px 0;line-height:1.7}
+p:last-child{margin-bottom:0}
+  .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:#3498db;color:#fff;text-decoration:none;font-weight:600;font-family:Georgia,serif}
+.btn.phone{background:#27ae60}
+.contact-form label{display:block;margin-top:12px;margin-bottom:4px;font-size:0.95rem;color:#555}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border:1px solid #dfe7ee;border-radius:8px;font-family:inherit;font-size:1rem}
+.contact-form textarea{min-height:120px;resize:vertical}
+.meta{font-size:0.9rem;color:#6b7a84}
+footer{margin-top:24px;text-align:center;color:#95a5a6;font-size:0.9rem;padding-top:18px;border-top:1px solid #eef3f8}
+</style>
+</head>
+<body>
+<div class="container" role="document">
+    <header role="banner">
+      <h1>Dan Torrence</h1>
+      <div class="tagline">Genealogy Enthusiast</div>
+      <div class="location">Green, Ohio</div>
+    </header>
+
+    <nav aria-label="Site navigation">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="active">Contact</a>
+    </nav>
+
+    <main role="main">
+      <div class="card">
+        <h2>Get in Touch</h2>
+      <p>I'd love to hear from you — whether you're a family member, a fellow genealogy enthusiast, or just someone who stumbled across the site. Feel free to reach out by email or phone.</p>
+      <div style="margin-bottom:12px">
+        <a class="btn" href="mailto:dan@torrence.biz">Email: dan@torrence.biz</a>
+          <a class="btn phone" style="margin-left:8px" href="tel:+1-740-541-5550">Call: (740) 541-5550</a>
+        </div>
+        <p class="meta">Based in Green, Ohio &mdash; Summit County</p>
+    </div>
+
+    <div class="card">
+      <h2>Send a Message</h2>
+      <p class="meta">Fill out the form below and your email client will open with a pre-filled message ready to send to dan@torrence.biz.</p>
+        <form class="contact-form" id="contactForm" aria-label="Contact form">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required />
+          <label for="email">Your Email Address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="What is this about?" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Hello Dan..." required></textarea>
+          <div style="margin-top:14px">
+            <button class="btn" type="submit">Open in Email Client</button>
+          </div>
+          <p class="meta" style="margin-top:10px">This will open your default email app with the message ready to send. Your message goes directly to dan@torrence.biz.</p>
+        </form>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2024 Dan Torrence. All rights reserved.</p>
+  </footer>
+</div>
+
+  <script>
+  (function(){
+    var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+        e.preventDefault();
+    var name = (document.getElementById('name').value || 'No name');
+    var email = (document.getElementById('email').value || '');
+    var subject = (document.getElementById('subject').value || 'Message from torrence.biz');
+    var message = (document.getElementById('message').value || '');
+    var encodedSubject = encodeURIComponent(subject);
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:dan@torrence.biz?subject=' + encodedSubject + '&body=' + body;
+  });
+})();
+</script>
+  </body>
+  </html>
