@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Dan Torrence — torrence.biz</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Dan Torrence — torrence.biz</title>
     <meta name="description" content="Dan Torrence — genealogy enthusiast in Green, Ohio. Family history, memories, and ways to get in touch." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <style>
@@ -14,6 +14,10 @@
         h1{font-size:2.2rem;color:#2c3e50;margin:0}
         .tagline{color:#7f8c8d;font-style:italic;margin-top:6px}
         .location{color:#95a5a6;margin-top:6px}
+        nav{text-align:center;margin-bottom:24px}
+        nav a{display:inline-block;margin:0 10px;color:#3498db;text-decoration:none;font-size:1rem;font-family:Georgia,serif}
+        nav a:hover{text-decoration:underline}
+        nav a.active{font-weight:700;color:#2c3e50;text-decoration:none}
         main{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:26px}
         @media(max-width:880px){main{grid-template-columns:1fr}}
         .card{background:#fbfcfe;padding:18px;border-radius:10px;border:1px solid #f2f6f9}
@@ -29,84 +33,94 @@
         .contact-form textarea{min-height:110px;resize:vertical}
         footer{margin-top:24px;text-align:center;color:#95a5a6;font-size:0.9rem;padding-top:18px;border-top:1px solid #eef3f8}
         .meta{font-size:0.95rem;color:#6b7a84}
-    </style>
-</head>
-<body>
-    <div class="container" role="document">
-        <header role="banner">
-            <h1>Dan Torrence</h1>
-            <div class="tagline">Genealogy Enthusiast</div>
-            <div class="location">Green, Ohio</div>
-        </header>
-
+        </style>
+    </head>
+    <body>
+        <div class="container" role="document">
+            <header role="banner">
+                <h1>Dan Torrence</h1>
+            <div class="tagline">Genealogy Enthusiast</div>div>
+            <div class="location">Green, Ohio</div>div>
+            </header>header>
+        
+        <nav aria-label="Site navigation">
+          <a href="/" class="active">Home</a>a>
+          <a href="/about.html">About</a>a>
+          <a href="/contact.html">Contact</a>a>
+        </nav>nav>
+        
         <main role="main">
-            <section class="card memorial" aria-labelledby="memorial-heading">
-                <h2 id="memorial-heading">In Loving Memory</h2>
-                <p>Laurie Torrence, my beloved wife of nearly 38 years, passed away on August 23, 2024. We were married on August 16, 1986, and she dedicated her life to education as a teacher, touching countless young lives. Her memory lives on through our family and the many students she inspired throughout her career.</p>
-            </section>
-
-            <aside aria-labelledby="contact-heading">
-                <div class="card">
-                    <h2 id="contact-heading">Get in touch</h2>
-                    <a class="btn" href="mailto:dan@torrence.biz">Email: dan@torrence.biz</a>
-                    <a class="btn phone" style="margin-left:8px" href="tel:+1-740-541-5550">Call: (740) 541-5550</a>
-
-                    <p class="meta" style="margin-top:12px">Or open your email client with a prefilled message:</p>
-
-                    <form class="contact-form" id="contactForm" aria-label="Contact form">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" placeholder="Your name" required>
-                        <label for="email" style="margin-top:8px">Your email</label>
-                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
-                        <label for="message" style="margin-top:8px">Message</label>
-                        <textarea id="message" name="message" placeholder="Hello Dan..." required></textarea>
-                        <div style="margin-top:10px">
-                            <button class="btn" type="submit">Open Email</button>
-                        </div>
-                        <p class="meta" style="margin-top:8px">Messages are sent to dan@torrence.biz via your email client.</p>
-                    </form>
-                </div>
-            </aside>
-        </main>
-
+        <section class="card memorial" aria-labelledby="memorial-heading">
+        <h2 id="memorial-heading">In Loving Memory</h2>
+        <p>Laurie Torrence, my beloved wife of nearly 38 years, passed away on August 23, 2024. We were married on August 16, 1986, and she dedicated her life to education as a teacher, touching countless young lives. Her memory lives on through our family and the many students she inspired throughout her career.</p>
+        </section>section>
+        
+        <aside aria-labelledby="contact-heading">
+        <div class="card">
+        <h2 id="contact-heading">Get in touch</h2>
+        <a class="btn" href="mailto:dan@torrence.biz">Email: dan@torrence.biz</a>a>
+        <a class="btn phone" style="margin-left:8px" href="tel:+1-740-541-5550">Call: (740) 541-5550</a>a>
+        
+        <p class="meta" style="margin-top:12px">Or open your email client with a prefilled message:</p>
+        
+        <form class="contact-form" id="contactForm" aria-label="Contact form">
+        <label for="name">Name</label>label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <label for="email" style="margin-top:8px">Your email</label>label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="message" style="margin-top:8px">Message</label>label>
+        <textarea id="message" name="message" placeholder="Hello Dan..." required></textarea>
+        <div style="margin-top:10px">
+        <button class="btn" type="submit">Open Email</button>button>
+        </div>div>
+        <p class="meta" style="margin-top:8px">Messages are sent to dan@torrence.biz via your email client.</p>
+        </form>form>
+        </div>div>
+        </aside>aside>
+        </main>main>
+        
         <section style="margin-top:22px" class="card" aria-labelledby="family-heading">
-            <h2 id="family-heading">Family</h2>
-            <p>I'm blessed to be the father of three wonderful sons and grandfather to five grandchildren (with a sixth on the way!).</p>
-
-            <div class="family-member">
-                <strong>Kyler &amp; Joanna</strong>
-                <div class="grandchildren">Two boys: Nico and Milo</div>
-            </div>
-
-            <div class="family-member">
-                <strong>Brendan &amp; Halle</strong>
-                <div class="grandchildren">Expecting their first child in April 2025 — a boy they plan to name Brady</div>
-            </div>
-
-            <div class="family-member">
-                <strong>Randall &amp; Isis Mayle</strong>
-                <div class="grandchildren">Two girls: Kinsley and Kimberly</div>
-            </div>
-        </section>
-
+        <h2 id="family-heading">Family</h2>
+        <p>I'm blessed to be the father of three wonderful sons and grandfather to five grandchildren (with a sixth on the way!).</p>
+        
+        <div class="family-member">
+        <strong>Kyler &amp; Joanna</strong>
+        <div class="grandchildren">Two boys: Nico and Milo</div>div>
+        </div>div>
+        
+        <div class="family-member">
+        <strong>Brendan &amp; Halle</strong>
+        <div class="grandchildren">Expecting their first child in April 2025 — a boy they plan to name Brady</div>div>
+        </div>div>
+        
+        <div class="family-member">
+        <strong>Randall &amp; Isis Mayle</strong>
+        <div class="grandchildren">Two girls: Kinsley and Kimberly</div>div>
+        </div>div>
+        </section>section>
+        
         <footer role="contentinfo">
-            <p>&copy; 2024 Dan Torrence. All rights reserved.</p>
-        </footer>
-    </div>
-
+        <p>&copy; 2024 Dan Torrence. All rights reserved.</p>
+        </footer>footer>
+        </div>div>
+    
     <script>
-    (function(){
-      var form = document.getElementById('contactForm');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var name = (document.getElementById('name').value || 'No name');
-        var email = (document.getElementById('email').value || '');
-        var message = (document.getElementById('message').value || '');
-        var subject = encodeURIComponent('Message from torrence.biz site');
-        var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-        window.location.href = 'mailto:dan@torrence.biz?subject=' + subject + '&body=' + body;
-      });
-    })();
+        (function(){
+            var form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                var name = (document.getElementById('name').value || 'No name');
+                var email = (document.getElementById('email').value || '');
+                var message = (document.getElementById('message').value || '');
+                var subject = encodeURIComponent('Message from torrence.biz site');
+                var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+                window.location.href = 'mailto:dan@torrence.biz?subject=' + subject + '&body=' + body;
+            });
+        })();
     </script>
-</body>
-</html>
+    </body>
+</html>html>
+    </script></p></strong></strong></p></p></h1>
+    </body>
+    </style></title>
+    </head>
